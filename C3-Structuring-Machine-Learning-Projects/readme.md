@@ -232,6 +232,9 @@ And these are not **natural perception problems**, so these are not *computer vi
 
 ![improve-model-performance](img/improve-performance.png)
 
+- Reduce Avoidable Bias: Momentum, RMSProp, Adam
+- Reduce Variance: Regularization such as L2, dropout, data augumentation
+
 ## Week 2: ML Strategy (2)
 
 ### Learning Objectives
