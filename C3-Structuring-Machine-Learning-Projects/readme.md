@@ -298,6 +298,14 @@ The guideline is that you have to choose a development set and test set to refle
 
 Instead of just having bias and variance as two potential problems, you now have a third potential problem, data mismatch.
 
+So, we need to establish a new set called Training-dev set: Same distribution as training set but not used for training. 
+
+Training and Training-Dev set are from the same distribution. 
+
+[Mark] So this is a data mismatch problem, where data mismatched. So this is a data mismatch problem, because your learning algorithm was not trained explicitly on data from training-dev or dev, but these two data sets come from different distributions. But whatever algorithm it's learning, it works great on training-dev but it doesn't work well on dev. 
+
+[Mark] So somehow your algorithm has learned to do well on a different distribution than what you really care about, so we call that a data mismatch problem.
+ 
 ![bias-variance-mismatched](img/bias-variance-mismatch.png)
 
 ![bias-variance-mismatched-1](img/bias-variance-mismatch-1.png)
