@@ -166,6 +166,16 @@ Without regularization term, we should see the cost function decreases monotonic
 - **Early stopping**: stopping halfway to get a mid-size `w`.
   - *Disadvantage*: early stopping couples two tasks of machine learning, optimizing the cost function `J` and not overfitting, which are supposed to be completely separate tasks, to make things more complicated.
   - *Advantage*: running the gradient descent process just once, you get to try out values of small `w`, mid-size `w`, and large `w`, without needing to try a lot of values of the L2 regularization hyperparameter lambda.
+    - In L2 regularization (also called weight decay), you need to pick a λ (lambda) that controls how strongly weights are penalized:
+    - Large λ → small weights (strong regularization)
+    - Small λ → large weights (weak regularization)
+    - With early stopping, you don’t need to train multiple models with different λ values.
+    - You can:
+    	•	Start training once,
+    	•	Observe the weight size and validation loss at each epoch,
+    	•	Choose the checkpoint (epoch) that performs best on validation.
+
+So early stopping gives you a spectrum of effective regularization strengths in a single run.
   
 Related to **orthogonalization**, explained later, stay tuned!
 
